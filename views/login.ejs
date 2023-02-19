@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><nav>
+    <p><a href="/">Library System</a></p>
+</nav>
+<div class="form">
+    <form action="/login" method="post">
+        <h2>Login</h2>
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <p id="reg"><%=failure%></p>
+        <button type="submit" class="login-btn">Login</button>
+    </form>
+</div>
+</body>
+</html>

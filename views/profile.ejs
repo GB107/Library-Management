@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><nav>
+    <p><a href="/">Library System</a></p>
+</nav>
+<div class="welcome">
+    <h1 id="home-heading">Welcome <%=name%>!</h1>
+
+    <a href="/book">Add Book</a>
+    
+    <h2>Your Books list:</h2>
+    <div>
+        <ul>
+            <%for(let i=0;i<books.length;i++){%>
+                <li type="none"><%=books[i].name%>, by <%=books[i].author%><form class="updateForm" action="/update" method="post"><input hidden type="text" value="<%i%>" name="index"><button class="ubtn" type="submit" name="action" value="update">Update</button><button class="ubtn" type="submit" name="action" value="delete">Delete</button></form></li>
+            <%}%>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
